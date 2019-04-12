@@ -2,7 +2,7 @@
   "name": "@blued-core/cache-intl",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register test/**/*.spec.ts",
     "build": "rm -rf dist && tsc",
