@@ -1,13 +1,13 @@
 import CacheIntl from '@blued-core/cache-intl'
 
-export default class Cache implements CacheIntl {
-  private cache = new Map()
+export default class Cache<T extends any = any> implements CacheIntl<T> {
+  private cache = new Map<string, T>()
 
   get(key: string) {
     return this.cache.get(key)
   }
 
-  set(key: string, value: any) {
+  set(key: string, value: T) {
     this.cache.set(key, value)
   }
 
