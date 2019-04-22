@@ -1,5 +1,5 @@
-export default interface CacheIntl {
-  get(key: string): any
-  set(key: string, value: any): void
+export default interface CacheIntl<T extends any> {
+  get(key: string): T
+  set(key: string, value: T): void
   has(key: string): boolean
 }
