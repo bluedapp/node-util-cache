@@ -1,10 +1,10 @@
 {
   "name": "@blued-core/interval-cache",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register test/**/*.spec.ts",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts --exit",
     "build": "rm -rf dist && tsc",
     "watch": "tsc -w",
     "lint": "bash ./scripts/lint-staged-files.sh",

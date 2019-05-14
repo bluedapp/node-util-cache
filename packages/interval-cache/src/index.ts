@@ -3,6 +3,11 @@ import Cache from '@blued-core/cache'
 const defaultInterval = 1e3
 const infiniteErrorCount = -1
 
+export interface Configs {
+  interval?: number
+  maxErrorCount?: number
+}
+
 export default class IntervalCache extends Cache {
   constructor (
     public interval: number = defaultInterval,
@@ -14,11 +19,15 @@ export default class IntervalCache extends Cache {
   createCache<T extends any = any> (
     key: string,
     getData: Function,
-    {
-      interval = this.interval,
-      maxErrorCount = this.maxErrorCount,
+    configs: Configs = {
+      interval: this.interval,
+      maxErrorCount: this.maxErrorCount,
     }
   ) {
+    const {
+      interval = this.interval,
+      maxErrorCount = this.maxErrorCount,
+    } = configs
     if (!this.has(key)) {
       // 如果没有已存在的key，则需要判断`getData`参数是否为函数类型，用来设置新的数据
       if (!getData || typeof getData !== 'function') throw new Error('getData must be function')
@@ -53,11 +62,15 @@ export default class IntervalCache extends Cache {
   createThenableCache<T extends any = any> (
     key: string,
     getData: Function,
-    {
-      interval = this.interval,
-      maxErrorCount = this.maxErrorCount,
+    configs: Configs = {
+      interval: this.interval,
+      maxErrorCount: this.maxErrorCount,
     }
   ) {
+    const {
+      interval = this.interval,
+      maxErrorCount = this.maxErrorCount,
+    } = configs
     if (!this.has(key)) {
       // 如果没有已存在的key，则需要判断`getData`参数是否为函数类型，用来设置新的数据
       if (!getData || typeof getData !== 'function') throw new Error('getData must be function')
