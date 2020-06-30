@@ -16,8 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@blued-core/cache": "^1.0.2",
-    "typescript": "^3.4.5"
+    "@blued-core/cache": "^1.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
@@ -32,7 +31,8 @@
     "eslint-config-blued-typescript": "^1.0.1",
     "eslint-plugin-import": "^2.17.2",
     "mocha": "^6.1.4",
-    "ts-node": "^8.1.0"
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
   },
   "config": {
     "commitizen": {
