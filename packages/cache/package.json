@@ -1,6 +1,6 @@
 {
   "name": "@blued-core/cache",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@blued-core/cache-intl": "0.0.3"
+    "@blued-core/cache-intl": "^0.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
